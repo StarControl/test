@@ -27,7 +27,7 @@ pipeline {
 
     stage('hello') {
       steps {
-        input(message: 'ok to continue?', id: 'continue', ok: 'ok')
+        input 'ok to continue?'
       }
     }
 
