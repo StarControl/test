@@ -1,14 +1,16 @@
 name: test
 on:
   push:
-    branches:
-      - master
-  pull-request:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
   test:
     name: test
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: hello
       run: echo "hello"
