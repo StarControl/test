@@ -1,10 +1,10 @@
 name: test
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ master ]
   pull_request:
-    branches: [ $default-branch ]
-runs-on: [self-hosted, linux]
+    branches: [ master ]
+runs-on: [self-hosted, Linux]
 jobs:
   test:
     name: test
