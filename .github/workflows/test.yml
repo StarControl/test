@@ -4,9 +4,10 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-runs-on: self-hosted
+
 jobs:
   test:
+    runs-on: self-hosted
     name: test
     steps:
     - name: Checkout
