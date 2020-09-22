@@ -22,12 +22,29 @@ pipeline {
           }
         }
 
+        stage('test4') {
+          steps {
+            sh 'echo "hello"'
+          }
+        }
+
       }
     }
 
     stage('hello') {
-      steps {
-        input 'ok to continue?'
+      parallel {
+        stage('hello') {
+          steps {
+            input 'ok to continue?'
+          }
+        }
+
+        stage('log') {
+          steps {
+            echo 'hi'
+          }
+        }
+
       }
     }
 
